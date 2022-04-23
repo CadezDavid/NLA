@@ -1,0 +1,10 @@
+u = sqrt([1.9; 2.0; 0.9; 2.9; 3.9]);
+d = [0.9; 1.4; 1.9; 2.9; 3.7];
+ro = 1/1000;
+
+% poisci niclo sekularne funkcije f na intervalu (1.4, 1.9)
+
+x0=1.4/3+1.9*2/3;
+
+rac_newtonova_metoda(u, d, ro, 2, x0);
+disp(x);
