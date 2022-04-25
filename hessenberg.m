@@ -15,7 +15,7 @@ for i = 1:n-1
     end
     A(i+1:end,:) = A(i+1:end,:) - (2/(w'*w))*(w*w')*A(i+1:end,:);
     A(:,i+1:end) = A(:,i+1:end) - (2/(w'*w))*A(:,i+1:end)*(w*w');
-    U(i+1:end,:) = U(i+1:end,:) - (2/(w'*w))*(w*w')*U(:,i+1:end);
+    U(i+1:end,:) = U(i+1:end,:) - (2/(w'*w))*(w*w')*U(i+1:end,:);
 end
 
 H = A;
