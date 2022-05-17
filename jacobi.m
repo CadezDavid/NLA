@@ -7,7 +7,6 @@ for step = 1:steps
 
     [p, q] = maxindex(A);
     if abs(A(p,q)) < eps1
-        disp("asdfdsa")
         return
     end
 
