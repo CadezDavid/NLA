@@ -18,14 +18,16 @@ R2 = R;
 
 for k = [linspace(i, j-1, j-i), linspace(j-2, i, j-i-1)]
 
-    disp([k, k+1]);
-    p = R2(k, k+1)/(R2(k,k)-R2(k+1,k+1));
-    c = p/sqrt(1+p^2);
-    s = 1/sqrt(1+p^2);
+    disp([k,k+1]);
+    p = (R2(k,k)-R2(k+1,k+1))/R(k,k+1);
+    c = 1/sqrt(1+p^2);
+    s = p/sqrt(1+p^2);
 
     Q([k k+1],:) = [c -s; s c] * Q([k k+1],:);
     R2([k k+1],:) = [c -s; s c] * R2([k k+1],:);
     R2(:,[k k+1]) = R2(:,[k k+1]) * [c -s; s c]';
 end
+
+R2 = Q * R * Q';
 
 end
