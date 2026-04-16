@@ -1,0 +1,1 @@
+Numerical Linear Algebra coursework from University of Ljubljana (MSc). Implementations of Jacobi eigenvalue methods, Givens rotations, Hessenberg reduction, Rayleigh quotient iteration, Sturm sequences, polynomial eigenvalue problems, and SVD-based signal regularization.
